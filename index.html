@@ -382,6 +382,70 @@ pointer-events:none;
         font-size:24px;
     }
 }
+@media screen and (max-width: 768px) {
+
+  body {
+    overflow-x: hidden;
+  }
+
+  .hero {
+    position: relative;
+    min-height: auto;
+    padding: 100px 30px 60px;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .name,
+  .website,
+  .title,
+  .subtitle,
+  .explore,
+  .hero-image {
+    position: static;
+  }
+
+  .name {
+    font-size: 42px;
+    line-height: 0.9;
+    margin-bottom: 15px;
+  }
+
+  .website {
+    font-size: 13px;
+    margin-bottom: 80px;
+  }
+
+  .title {
+    font-size: 60px;
+    line-height: 1;
+    margin-bottom: 25px;
+  }
+
+  .subtitle {
+    font-size: 20px;
+    width: 100%;
+    line-height: 1.4;
+    margin-bottom: 40px;
+  }
+
+  .hero-image {
+    width: 220px;
+    height: auto;
+    opacity: 0.6;
+    margin: 30px auto;
+  }
+
+  .info {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .about,
+  .contact {
+    width: 100%;
+  }
+}
 
 </style>
 
