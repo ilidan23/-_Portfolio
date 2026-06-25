@@ -52,7 +52,11 @@ color:#222;
     width:55%;
     height:90%;
     z-index:1;
-    pointer-events:none;
+    pointer-events:auto;
+}
+.hero-image:hover{
+    transform: scale(1.05);
+    transition: 0.4s ease;
 }
 
 
@@ -282,6 +286,18 @@ pointer-events:none;
     transform:translateY(-5px);
 
 }
+.poster-pic{
+    width:350px;
+    height:auto;
+    border-radius:20px;
+    object-fit:cover;
+    box-shadow:0 20px 40px rgba(0,0,0,0.3);
+    transition:0.4s;
+}
+
+.poster-pic:hover{
+    transform:scale(1.03);
+}
 @media screen and (max-width: 768px){
 
     nav{
@@ -445,7 +461,13 @@ pointer-events:none;
   .contact {
     width: 100%;
   }
+  .poster-pic{
+    width:100%;
+    max-width:320px;
+    margin:auto;
 }
+}
+
 
 </style>
 
@@ -618,7 +640,7 @@ Photoshop • Illustrator
     <div id="contact" class="contact">
 
         <h2>About Me</h2>
-        <img src="./lion.png" class="profile-pic">
+        <img src="./shivan-poster.png" class="poster-pic">
 
 
         <p><strong>Web Design & IT Programming Student</strong></p>
