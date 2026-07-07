@@ -344,6 +344,24 @@ pointer-events:none;
 .poster-pic:hover{
     transform:scale(1.03);
 }
+.project img{
+
+    width:75%;
+    border-radius:12px;
+    box-shadow:0px 10px 25px rgba(0,0,0,.15);
+    transition:0.4s ease;
+    cursor:pointer;
+
+}
+
+.project img.python-image{
+
+    width:350px;
+    max-width:280px;
+    height:auto;
+
+}
+
 @media screen and (max-width: 768px){
 
     nav{
@@ -443,6 +461,31 @@ pointer-events:none;
         height:45px;
         font-size:24px;
     }
+    .python-image{
+
+    width:250px !important;
+    height:auto;
+
+}
+.project img{
+
+width:350px;
+border-radius:12px;
+
+box-shadow:0px 10px 25px rgba(0,0,0,.15);
+
+transition:0.4s ease;
+
+cursor:pointer;
+
+}
+.project img.python-image{
+
+        width:180px;
+        height:auto;
+
+    }
+
 }
 @media screen and (max-width: 768px) {
 
@@ -742,6 +785,49 @@ Photoshop • Illustrator
 </div>
 
 </section>
+<section class="project">
+
+    <img src="./python.c.png" class="python-image" alt="Python Calculator">
+
+    <h2>Python Calculator</h2>
+
+    <div class="type">
+        Desktop Application
+    </div>
+
+    <div class="year">
+        2026
+    </div>
+
+    <div class="tools">
+        Python • Tkinter • GUI
+    </div>
+
+    <br>
+
+    <p style="max-width:700px;text-align:center;line-height:1.8;">
+
+        This calculator was developed with Python and Tkinter.
+        It supports addition, subtraction, multiplication,
+        division and decimal numbers.
+
+    </p>
+
+    <br>
+
+    <a href="taschenrechner.py"
+       download
+       style="text-decoration:none;
+              padding:12px 28px;
+              background:#222;
+              color:white;
+              border-radius:8px;">
+
+        Download Source Code
+
+    </a>
+
+</section>
 <section class="info">
 
     <div id="about" class="about">
@@ -776,6 +862,7 @@ Photoshop • Illustrator
     </div>
 
 </section>
+
 
 
 
