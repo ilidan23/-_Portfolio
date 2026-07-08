@@ -9,566 +9,14 @@
 
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;600&family=Poppins:wght@300;400;500&display=swap" rel="stylesheet">
 
-<style>
-
-*{
-margin:0;
-padding:0;
-box-sizing:border-box;
-scroll-behavior:smooth;
-}
-
-body{
-
-background:#E8EDE3;
-font-family:Poppins,sans-serif;
-color:#222;
-
-}
-.hero{
-
-    min-height:100vh;
-    position:relative;
-    overflow:hidden;
-    padding:80px;
-
-}
-
-
-
-.line{
-
-    width:70px;
-    height:1px;
-    background:#777;
-    margin:30px 0;
-
-}
-
-.hero-image{
-    position:absolute;
-    right:-50px;
-    bottom:0;
-    width:55%;
-    height:90%;
-    z-index:1;
-    pointer-events:auto;
-    transition: transform 0.25s ease-out;
-    will-change: transform;
-}
-.hero-image:hover{
-    transform: scale(1.03);
-    
-}
-
-
-.hero-image img{
-
-    width:100%;
-    height:100%;
-    object-fit:contain;
-
-}
-
-.explore{
-
-    position:absolute;
-    left:80px;
-    bottom:80px;
-
-    font-size:20px;
-    color:#555;
-
-}
-
-nav{
-    position:fixed;
-    top:30px;
-    right:70px;
-    display:flex;
-    gap:50px;
-    font-size:20px;
-    z-index:10000;
-}
-
-nav a{
-
-text-decoration:none;
-color:#222;
-
-}
-
-section{
-
-min-height:100vh;
-padding:80px;
-
-display:flex;
-flex-direction:column;
-justify-content:center;
-
-}
-
-.name{
-    position:absolute;
-    top:80px;
-    left:80px;
-
-    font-family:"Cormorant Garamond",serif;
-    font-size:55px;
-}
-
-.website{
-    position:absolute;
-    top:150px;
-    left:80px;
-
-    font-size:14px;
-    color:#666;
-}
-
-.title{
-    position:absolute;
-    left:80px;
-    top:280px;
-
-    font-family:"Cormorant Garamond",serif;
-    font-size:90px;
-}
-
-.subtitle{
-    position:absolute;
-    left:80px;
-    top:520px;
-
-    font-size:24px;
-    color:#666;
-}
-
-.explore{
-    position:absolute;
-    left:80px;
-    bottom:80px;
-
-    font-size:20px;
-    color:#555;
-}
-
-.project{
-
-display:flex;
-flex-direction:column;
-align-items:center;
-
-}
-
-.project img{
-
-width:75%;
-border-radius:12px;
-
-box-shadow:0px 10px 25px rgba(0,0,0,.15);
-
-transition:0.4s ease;
-
-cursor:pointer;
-
-}
-.project img:hover{
-
-    transform:translateY(-10px) scale(1.03);
-
-    box-shadow:0px 25px 50px rgba(0,0,0,.35);
-
-}
-.before-after{
-    display:flex;
-    justify-content:center;
-    align-items:flex-start;
-    gap:40px;
-    width:100%;
-    margin-top:30px;
-    flex-wrap:wrap;
-}
-
-.before-after-box{
-    width:42%;
-    text-align:center;
-}
-
-.before-after-box h3{
-    font-size:24px;
-    margin-bottom:15px;
-}
-
-.before-after-box img{
-    width:100%;
-    height:550px;
-    object-fit:contain;
-    background:white;
-    border-radius:15px;
-    box-shadow:0 10px 25px rgba(0,0,0,0.25);
-    transition:0.3s;
-}
-
-.before-after-box img:hover{
-    transform:scale(1.03);
-}
-
-.project h2{
-
-font-family:"Cormorant Garamond",serif;
-font-size:48px;
-margin-top:40px;
-
-}
-
-.type{
-
-font-size:22px;
-color:#666;
-margin-top:10px;
-
-}
-
-.year{
-
-color:#888;
-margin-top:8px;
-
-}
-
-.tools{
-
-color:#888;
-margin-top:8px;
-
-}
-
-footer{
-
-height:250px;
-
-display:flex;
-justify-content:center;
-align-items:center;
-gap:60px;
-
-font-size:22px;
-
-}
-
-footer a{
-
-text-decoration:none;
-color:#222;
-
-}
-#welcome{
-
-position:fixed;
-top:0;
-left:0;
-
-width:100%;
-height:100%;
-
-background:#111;
-color: white;
-
-display:flex;
-justify-content:center;
-align-items:center;
-
-font-family:"Cormorant Garamond",serif;
-font-size:90px;
-
-z-index:9999;
-
-transition:opacity 1.5s;
-}
-
-.hide{
-
-opacity:0;
-pointer-events:none;
-
-}
-.top-button{
-
-    position:fixed;
-
-    right:40px;
-    bottom:40px;
-
-    width:60px;
-    height:60px;
-
-    border-radius:50%;
-
-    background:#111;
-    color:white;
-
-    text-decoration:none;
-
-    display:flex;
-    justify-content:center;
-    align-items:center;
-
-    font-size:30px;
-
-    box-shadow:0px 5px 15px rgba(0,0,0,.3);
-
-    z-index:9999;
-
-    transition:0.3s;
-
-}
-
-.top-button:hover{
-
-    background:#444;
-
-    transform:translateY(-5px);
-
-}
-.poster-pic{
-    width:350px;
-    height:auto;
-    border-radius:20px;
-    object-fit:cover;
-    box-shadow:0 20px 40px rgba(0,0,0,0.3);
-    transition:0.4s;
-}
-
-.poster-pic:hover{
-    transform:scale(1.03);
-}
-.project img{
-
-    width:75%;
-    border-radius:12px;
-    box-shadow:0px 10px 25px rgba(0,0,0,.15);
-    transition:0.4s ease;
-    cursor:pointer;
-
-}
-
-.project img.python-image{
-
-    width:350px;
-    max-width:280px;
-    height:auto;
-
-}
-
-@media screen and (max-width: 768px){
-
-    nav{
-        top:20px;
-        right:20px;
-        gap:18px;
-        font-size:14px;
-    }
-
-    section{
-        padding:30px;
-    }
-
-    .hero{
-        min-height:100vh;
-        padding:30px;
-    }
-
-    .name{
-        top:90px;
-        left:30px;
-        font-size:34px;
-    }
-
-    .website{
-        top:140px;
-        left:30px;
-        font-size:12px;
-    }
-
-    .title{
-        top:230px;
-        left:30px;
-        font-size:55px;
-        line-height:1.1;
-    }
-
-    .subtitle{
-        top:390px;
-        left:30px;
-        font-size:17px;
-        width:80%;
-    }
-
-    .explore{
-        left:30px;
-        bottom:60px;
-        font-size:16px;
-    }
-
-    .hero-image{
-    position:static;
-    width:320px;
-    height:auto;
-    margin:20px auto;
-    opacity:1;
-}
-
-    .project{
-        padding:40px 25px;
-    }
-
-    .project img{
-        width:100%;
-    }
-
-    .project h2{
-        font-size:34px;
-        text-align:center;
-    }
-
-    .type{
-        font-size:18px;
-    }
-
-    .info{
-        flex-direction:column;
-        padding:40px 30px;
-        gap:40px;
-    }
-
-    .about,
-    .contact{
-        width:100%;
-    }
-
-    footer{
-        font-size:14px;
-        padding:30px;
-        text-align:center;
-    }
-
-    .top-button{
-        right:20px;
-        bottom:20px;
-        width:45px;
-        height:45px;
-        font-size:24px;
-    }
-    .python-image{
-
-    width:250px !important;
-    height:auto;
-
-}
-.project img{
-
-width:350px;
-border-radius:12px;
-
-box-shadow:0px 10px 25px rgba(0,0,0,.15);
-
-transition:0.4s ease;
-
-cursor:pointer;
-
-}
-.project img.python-image{
-
-        width:180px;
-        height:auto;
-
-    }
-
-}
-@media screen and (max-width: 768px) {
-
-  body {
-    overflow-x: hidden;
-  }
-
-  .hero {
-    position: relative;
-    min-height: auto;
-    padding: 100px 30px 60px;
-    display: flex;
-    flex-direction: column;
-  }
-
-  .name,
-  .website,
-  .title,
-  .subtitle,
-  .explore,
-  .hero-image {
-    position: static;
-  }
-
-  .name {
-    font-size: 42px;
-    line-height: 0.9;
-    margin-bottom: 15px;
-  }
-
-  .website {
-    font-size: 13px;
-    margin-bottom: 80px;
-  }
-
-  .title {
-    font-size: 60px;
-    line-height: 1;
-    margin-bottom: 25px;
-  }
-
-  .subtitle {
-    font-size: 20px;
-    width: 100%;
-    line-height: 1.4;
-    margin-bottom: 40px;
-  }
-
-  .hero-image {
-    width: 220px;
-    height: auto;
-    opacity: 0.6;
-    margin: 30px auto;
-  }
-
-  .info {
-    display: flex;
-    flex-direction: column;
-  }
-
-  .about,
-  .contact {
-    width: 100%;
-  }
-  .poster-pic{
-    width:100%;
-    max-width:320px;
-    margin:auto;
-}
-.before-after-box{
-    width:100%;
-}
-}
-
-
-</style>
-
 </head>
 
 <body>
-    <div id="welcome">
+  <div id="welcome">
 
-Welcome to my Portfolio
+<span class="jp">ようこそ</span><br>
+<span class="name">SHIVAN MURAD</span><br>
+<span class="jp">ポートフォリオへ</span>
 
 </div>
 
@@ -577,6 +25,8 @@ Welcome to my Portfolio
 <a href="#portfolio">Portfolio</a>
 <a href="#about">About</a>
 <a href="#contact">Contact</a>
+
+<button id="theme-toggle">🌙</button>
 
 </nav>
 
@@ -604,7 +54,7 @@ Welcome to my Portfolio
     </div>
 
     <a href="#portfolio" class="explore">
-    ↓ Explore my work
+    ↓ 制作実績を見る
 </a>
 
     <div class="hero-image">
@@ -621,7 +71,7 @@ Welcome to my Portfolio
 
 <div class="type">
 
-Automotive Design
+自動車デザイン
 
 </div>
 
@@ -647,7 +97,7 @@ Photoshop • Illustrator
 
 <div class="type">
 
-Digital Art
+デジタルアート
 
 </div>
 
@@ -675,7 +125,7 @@ Photoshop • Illustrator
 
 <div class="type">
 
-Frontend Development
+フロントエンド開発
 
 </div>
 
@@ -701,7 +151,7 @@ HTML • CSS • JavaScript
     <p class="year">2026</p>
 
     <p class="type">
-        FIGMA • GRAPHIC DESIGN • UI DESIGN
+        Figma • グラフィックデザイン • UIデザイン
     </p>
 
 </section>
@@ -712,7 +162,7 @@ HTML • CSS • JavaScript
     <h2>The Last Light</h2>
 
     <div class="type">
-        Photo Manipulation
+       フォトマニピュレーション
     </div>
 
     <div class="year">
@@ -720,7 +170,7 @@ HTML • CSS • JavaScript
     </div>
 
     <div class="tools">
-        Photoshop • Photo Editing • Color Grading
+        Photoshop • 写真編集 • カラーグレーディング
     </div>
 
 </section>
@@ -732,19 +182,19 @@ HTML • CSS • JavaScript
     <div class="before-after">
 
         <div class="before-after-box">
-            <h3>Before</h3>
+            <h3>編集前</h3>
             <img src="./flasch7.png">
         </div>
 
         <div class="before-after-box">
-            <h3>After</h3>
+            <h3>編集後</h3>
             <img src="./lemon flasche1.png">
         </div>
 
     </div>
 
     <div class="type">
-        Product Advertisement Design
+        商品広告デザイン
     </div>
 
     <div class="year">
@@ -768,7 +218,7 @@ HTML • CSS • JavaScript
 
 <div class="type">
 
-Automotive Design 
+自動車デザイン
 
 </div>
 
@@ -789,10 +239,10 @@ Photoshop • Illustrator
 
     <img src="./python.c.png" class="python-image" alt="Python Calculator">
 
-    <h2>Python Calculator</h2>
+    <h2>Python電卓</h2>
 
     <div class="type">
-        Desktop Application
+        デスクトップアプリケーション
     </div>
 
     <div class="year">
@@ -807,9 +257,9 @@ Photoshop • Illustrator
 
     <p style="max-width:700px;text-align:center;line-height:1.8;">
 
-        This calculator was developed with Python and Tkinter.
-        It supports addition, subtraction, multiplication,
-        division and decimal numbers.
+        PythonとTkinterを使用して開発した電卓です。
+        加算・減算・乗算・除算に対応しており、
+        小数点を含む計算も行えます。
 
     </p>
 
@@ -823,7 +273,7 @@ Photoshop • Illustrator
               color:white;
               border-radius:8px;">
 
-        Download Source Code
+        ソースコードをダウンロード
 
     </a>
 
@@ -832,30 +282,29 @@ Photoshop • Illustrator
 
     <div id="about" class="about">
 
-        <h2>Contact</h2>
+        <h2>お問い合わせ</h2>
 
-        <h3>Email</h3>
+        <h3>メール</h3>
 <p>shivan@example.com</p>
 
-<h3>Location</h3>
+<h3>所在地</h3>
 <p>Nagoya, Japan</p>
 
-<h3>Languages</h3>
+<h3>使用言語</h3>
 <p>German • English • Japanese</p>
 
     </div>
 
     <div id="contact" class="contact">
 
-        <h2>About Me</h2>
+        <h2>自己紹介</h2>
         <img src="./shivan-poster.png" class="poster-pic">
 
 
-        <p><strong>Web Developer & 
-        
-        IT Programming Student</strong></p>
+        <p><strong>Webデベロッパー &
+            ITプログラミング専攻学生</strong></p>
 
-        <h3>Skills</h3>
+        <h3>スキル</h3>
 
 <p>HTML • CSS • JavaScript • Python • Photoshop • Illustrator • Figma</p>
 
@@ -879,20 +328,149 @@ Photoshop • Illustrator
 
         <div class="copyright">
 
-            © 2026 SHIVAN MURAD • All Rights Reserved
+            © 2026 SHIVAN MURAD • All Rights Reserved • 無断転載・複製を禁じます。
 
         </div>
 
     </div>
 
 </footer>
+<div id="farewell-trigger"></div>
+<div id="farewell-screen">
+
+    <div class="farewell-overlay"></div>
+
+    <img src="laterne1.png" class="lantern lantern-left" alt="Laterne">
+
+    <div class="farewell-content">
+
+        <h1>ありがとうございました</h1>
+
+        <p>See you again.</p>
+
+        <h2>SHIVAN MURAD</h2>
+
+        <img src="logo1.png" class="lion-logo" alt="Logo">
+
+    </div>
+
+    <img src="laterne1.png" class="lantern lantern-right" alt="Laterne">
+
+    <div class="petals">
+
+    <img src="sakurablätter.png" class="petal p1">
+    <img src="sakurablätter.png" class="petal p2">
+    <img src="sakurablätter.png" class="petal p3">
+    <img src="sakurablätter.png" class="petal p4">
+    <img src="sakurablätter.png" class="petal p5">
+    <img src="sakurablätter.png" class="petal p6">
+    <img src="sakurablätter.png" class="petal p7">
+    <img src="sakurablätter.png" class="petal p8">
+    <img src="sakurablätter.png" class="petal p9">
+    <img src="sakurablätter.png" class="petal p10">
+
+</div>
+
+</div>
 <script>
 
-setTimeout(function(){
+// ==============================
+// Welcome Screen
+// ==============================
 
-document.getElementById("welcome").classList.add("hide");
+setTimeout(function () {
 
-},3000);
+    document.getElementById("welcome").classList.add("hide");
+
+}, 3000);
+
+
+// ==============================
+// Dark / Light Mode
+// ==============================
+
+const themeButton = document.getElementById("theme-toggle");
+
+// Beim ersten Besuch automatisch Dark Mode aktivieren
+if (!localStorage.getItem("theme")) {
+
+    localStorage.setItem("theme", "dark");
+
+}
+
+// Gespeichertes Theme laden
+const savedTheme = localStorage.getItem("theme");
+
+if (savedTheme === "dark") {
+
+    document.body.classList.add("dark");
+    themeButton.textContent = "☀️";
+
+} else {
+
+    document.body.classList.remove("dark");
+    themeButton.textContent = "🌙";
+
+}
+
+// Beim Klick umschalten
+themeButton.addEventListener("click", function () {
+
+    document.body.classList.toggle("dark");
+
+    if (document.body.classList.contains("dark")) {
+
+        localStorage.setItem("theme", "dark");
+        themeButton.textContent = "☀️";
+
+    } else {
+
+        localStorage.setItem("theme", "light");
+        themeButton.textContent = "🌙";
+
+    }
+
+});
+// ======================================
+// Farewell Screen
+// ======================================
+
+const farewell = document.getElementById("farewell-screen");
+const trigger = document.getElementById("farewell-trigger");
+
+let isPlaying = false;
+
+const observer = new IntersectionObserver((entries) => {
+
+    entries.forEach(entry => {
+
+        if (entry.isIntersecting && !isPlaying) {
+
+            isPlaying = true;
+
+            setTimeout(() => {
+
+                farewell.classList.add("show");
+
+                setTimeout(() => {
+
+                    farewell.classList.remove("show");
+
+                    isPlaying = false;
+
+                }, 6000);
+
+            }, 600);
+
+        }
+
+    });
+
+}, {
+    threshold: 0.6
+});
+
+observer.observe(trigger);
 
 </script>
 <a href="#" class="top-button">
