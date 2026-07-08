@@ -1215,25 +1215,17 @@ cursor:pointer;
 /* Welcome Screen Mobile */
 /* ============================= */
 
-#welcome{
 
-    font-size:42px;
-
-    line-height:1.4;
-
-    padding:20px;
-
-}
 
 #welcome .welcome-name{
 
-    font-size:42px;
+    font-size:10px !important;
 
 }
 
 #welcome .jp{
 
-    font-size:28px;
+    font-size:10px !important;
 
 }
 }
