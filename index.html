@@ -1,386 +1,231 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<link rel="stylesheet" href="style.css">
 
-<title>Shivan Murad Portfolio</title>
+    <meta charset="UTF-8">
 
-<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;600&family=Poppins:wght@300;400;500&display=swap" rel="stylesheet">
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>Japan Travel Planner</title>
+
+    <link rel="stylesheet"
+          href="style.css">
 
 </head>
 
 <body>
-  <div id="welcome">
 
-    <div class="welcome-name">
-        SHIVAN MURAD
+<header>
+
+    <div class="logo">
+
+        🇯🇵 Japan Travel Planner
+
     </div>
 
-    <div class="jp-group">
-        <div class="jp">ようこそ</div>
-        <div class="jp">ポートフォリオへ</div>
-    </div>
+    <nav>
 
-</div>
+        <a href="#home">Home</a>
+        <a href="#destinations">Destinations</a>
+        <a href="#planner">Planner</a>
+        <a href="#contact">Favorites</a>
+        
+        <button id="themeToggle">🌙</button>
 
-<nav>
+    </nav>
 
-<a href="#portfolio">Portfolio</a>
-<a href="#about">About</a>
-<a href="#contact">Contact</a>
+</header>
 
-<button id="theme-toggle">🌙</button>
 
-</nav>
+<section class="hero" id="home">
 
-<section class="hero">
+    <div class="overlay">
 
-    <div class="name">
-        SHIVAN MURAD
-    </div>
+        <h1>
 
-    <div class="website">
-     <a href="https://github.com/ilidan23/-_Portfolio.git" target="_blank">
-    GitHubページ
-</a>
-    </div>
+            Discover Japan
 
-    <div class="title">
-       Web Developer
-        & 
-        <br>
-        IT Programmer
-    </div>
+        </h1>
 
-    <div class="subtitle">
-        Building modern websites and future software.
-    </div>
+        <p>
 
-    <a href="#portfolio" class="explore">
-    ↓ 制作実績を見る
-</a>
+            Plan your perfect trip across Japan.
 
-    <div class="hero-image">
-        <img src="lion.png" alt="Lion">
+        </p>
+
+        <button id="startButton">
+
+            Start Planning
+
+        </button>
+
     </div>
 
 </section>
+<section class="destinations" id="destinations">
 
-<section id="portfolio" class="project">
+    <h2>Popular Destinations</h2>
 
-<img src="./wabben auto.png">
+    <div class="cards">
 
-<h2>Purple Automotive Concept</h2>
+        <div class="card">
 
-<div class="type">
+            <img src="images/tokyo.png" alt="Tokyo">
 
-自動車デザイン
+            <h3>Tokyo</h3>
 
-</div>
+            <p>
+                Modern skyscrapers, anime culture,
+                shopping and nightlife.
+            </p>
 
-<div class="year">
+            <button onclick="exploreCity('Tokyo')">
+    Explore
+</button>
 
-2026
-
-</div>
-
-<div class="tools">
-
-Photoshop • Illustrator
-
-</div>
-
-</section>
-
-<section class="project">
-
-<img src="./schmetterling.png">
-
-<h2>Butterfly Essence</h2>
-
-<div class="type">
-
-デジタルアート
-
-</div>
-
-<div class="year">
-
-2026
-
-</div>
-
-<div class="tools">
-
-Photoshop • Illustrator
-
-</div>
-
-</section>
-
-
-
-<section class="project">
-
-<img src="./cafe bild.png">
-
-<h2>Personal Portfolio</h2>
-
-<div class="type">
-
-フロントエンド開発
-
-</div>
-
-<div class="year">
-
-2026
-
-</div>
-
-<div class="tools">
-
-HTML • CSS • JavaScript
-
-</div>
-
-</section>
-<section class="project">
-
-    <img src="./sweet-design.png">
-
-    <h2>Sweet Design Collection</h2>
-
-    <p class="year">2026</p>
-
-    <p class="type">
-        Figma • グラフィックデザイン • UIデザイン
-    </p>
-
-</section>
-<section class="project">
-
-    <img src="./seven eleven.png">
-
-    <h2>The Last Light</h2>
-
-    <div class="type">
-       フォトマニピュレーション
-    </div>
-
-    <div class="year">
-        2026
-    </div>
-
-    <div class="tools">
-        Photoshop • 写真編集 • カラーグレーディング
-    </div>
-
-</section>
-
-<section class="project">
-
-    <h2>Lime Sparkling Water Advertisement</h2>
-
-    <div class="before-after">
-
-        <div class="before-after-box">
-            <h3>編集前</h3>
-            <img src="./flasch7.png">
         </div>
 
-        <div class="before-after-box">
-            <h3>編集後</h3>
-            <img src="./lemon flasche1.png">
+        <div class="card">
+
+            <img src="images/kyoto.png" alt="Kyoto">
+
+            <h3>Kyoto</h3>
+
+            <p>
+                Beautiful temples,
+                shrines and traditional Japan.
+            </p>
+
+            <button onclick="exploreCity('Kyoto')">
+    Explore
+</button>
+
+        </div>
+
+        <div class="card">
+
+            <img src="images/osaka.png" alt="Osaka">
+
+            <h3>Osaka</h3>
+
+            <p>
+                Famous street food,
+                entertainment and Osaka Castle.
+            </p>
+
+            <button onclick="exploreCity('Osaka')">
+    Explore
+</button>
+        </div>
+
+        <div class="card">
+
+            <img src="images/nagoya.png" alt="Nagoya">
+
+            <h3>Nagoya</h3>
+
+            <p>
+                Toyota Museum,
+                Nagoya Castle and Osu District.
+            </p>
+
+            <button onclick="exploreCity('Nagoya')">
+    Explore
+</button>
+
         </div>
 
     </div>
 
-    <div class="type">
-        商品広告デザイン
-    </div>
+</section>
+<section class="planner" id="planner">
 
-    <div class="year">
-        2026
-    </div>
+    <h2>Plan Your Trip</h2>
 
-    <div class="tools">
-        Photoshop • Photo Manipulation • Color Grading
+    <div class="planner-box">
+
+        <div class="input-group">
+
+            <label>Select a City</label>
+
+            <select id="city">
+
+                <option>Tokyo</option>
+                <option>Kyoto</option>
+                <option>Osaka</option>
+                <option>Nagoya</option>
+
+            </select>
+
+        </div>
+
+        <div class="input-group">
+
+            <label>Budget</label>
+
+            <select id="budget">
+
+                <option>¥50,000</option>
+                <option>¥100,000</option>
+                <option>¥150,000</option>
+                <option>¥200,000+</option>
+
+            </select>
+
+        </div>
+
+        <div class="input-group">
+
+            <label>Travel Days</label>
+
+            <select id="days">
+
+                <option>3 Days</option>
+                <option>5 Days</option>
+                <option>1 Week</option>
+                <option>2 Weeks</option>
+
+            </select>
+
+        </div>
+
+        <button id="planButton">
+
+            Generate Trip
+
+        </button>
+
     </div>
 
 </section>
 
 
+   
+<section class="favorites" id="contact">
 
+    <h2>❤️ Favorite Destinations</h2>
 
-<section class="project">
+    <div id="favoriteList">
 
-<img src="./shivan auto.png">
+        No favorites yet.
 
-<h2>DRIVE</h2>
-
-<div class="type">
-
-自動車デザイン
-
-</div>
-
-<div class="year">
-
-2026
-
-</div>
-
-<div class="tools">
-
-Photoshop • Illustrator 
-
-</div>
-
-</section>
-<section class="project">
-
-    <img src="./python.c.png" class="python-image" alt="Python Calculator">
-
-    <h2>Python電卓</h2>
-
-    <div class="type">
-        デスクトップアプリケーション
-    </div>
-
-    <div class="year">
-        2026
-    </div>
-
-    <div class="tools">
-        Python • Tkinter • GUI
     </div>
 
     <br>
 
-    <p style="max-width:700px;text-align:center;line-height:1.8;">
+    <button id="favoriteButton">
 
-        PythonとTkinterを使用して開発した電卓です。
-        加算・減算・乗算・除算に対応しており、
-        小数点を含む計算も行えます。
+        ❤️ Add to Favorites
 
-    </p>
-
-    <br>
-
-    <a href="taschenrechner.py"
-       download
-       style="text-decoration:none;
-              padding:12px 28px;
-              background:#222;
-              color:white;
-              border-radius:8px;">
-
-        ソースコードをダウンロード
-
-    </a>
-
-</section>
-<section class="info">
-
-    <div id="about" class="about">
-
-        <h2>お問い合わせ</h2>
-
-        <h3>メール</h3>
-<p>shivan@example.com</p>
-
-<h3>所在地</h3>
-<p>Nagoya, Japan</p>
-
-<h3>使用言語</h3>
-<p>German • English • Japanese</p>
-
-    </div>
-
-    <div id="contact" class="contact">
-
-        <h2>自己紹介</h2>
-        <img src="./shivan-poster.png" class="poster-pic">
-
-
-        <p><strong>Webデベロッパー &
-            ITプログラミング専攻学生</strong></p>
-
-        <h3>スキル</h3>
-
-<p>HTML • CSS • JavaScript • Python • Photoshop • Illustrator • Figma</p>
-
-    </div>
+    </button>
 
 </section>
 
-
-
-
-<footer>
-
-    <div class="footer-content">
-
-        <div class="social">
-
-            <a href="#">Instagram</a>
-            <a href="#">GitHub</a>
-
-        </div>
-
-        <div class="copyright">
-
-            © 2026 SHIVAN MURAD • All Rights Reserved • 無断転載・複製を禁じます。
-
-        </div>
-
-    </div>
-
-</footer>
-<div id="farewell-trigger"></div>
-<div id="farewell-screen">
-
-    <div class="farewell-overlay"></div>
-
-    <img src="laterne1.png" class="lantern lantern-left" alt="Laterne">
-
-    <div class="farewell-content">
-
-        <h1>ありがとうございました</h1>
-
-        <p>See you again.</p>
-
-        <h2>SHIVAN MURAD</h2>
-
-        <img src="logo1.png" class="lion-logo" alt="Logo">
-
-    </div>
-
-    <img src="laterne1.png" class="lantern lantern-right" alt="Laterne">
-
-    <div class="petals">
-
-    <img src="sakurablätter.png" class="petal p1">
-    <img src="sakurablätter.png" class="petal p2">
-    <img src="sakurablätter.png" class="petal p3">
-    <img src="sakurablätter.png" class="petal p4">
-    <img src="sakurablätter.png" class="petal p5">
-    <img src="sakurablätter.png" class="petal p6">
-    <img src="sakurablätter.png" class="petal p7">
-    <img src="sakurablätter.png" class="petal p8">
-    <img src="sakurablätter.png" class="petal p9">
-    <img src="sakurablätter.png" class="petal p10">
-
-</div>
-
-</div>
-
-<a href="#" class="top-button">
-    ↑
-</a>
+<script src="data.js"></script>
 <script src="script.js"></script>
+
 </body>
+
 </html>

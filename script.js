@@ -1,97 +1,62 @@
-// ==============================
-// Welcome Screen
-// ==============================
+const button = document.getElementById("planButton");
+const favoriteButton = document.getElementById("favoriteButton");
+const startButton = document.getElementById("startButton");
 
-setTimeout(function () {
-
-    document.getElementById("welcome").classList.add("hide");
-
-}, 3000);
+let favorites = [];
 
 
-// ==============================
-// Dark / Light Mode
-// ==============================
 
-const themeButton = document.getElementById("theme-toggle");
+button.addEventListener("click", createTrip);
 
-// Beim ersten Besuch automatisch Dark Mode aktivieren
-if (!localStorage.getItem("theme")) {
+function createTrip(){
 
-    localStorage.setItem("theme", "dark");
+    const city = document.getElementById("city").value;
+   
+
+  window.location.href = "trip.html?city=" + city;
 
 }
+favoriteButton.addEventListener("click", addFavorite);
+startButton.addEventListener("click", goPlanner);
 
-// Gespeichertes Theme laden
-const savedTheme = localStorage.getItem("theme");
+function addFavorite(){
 
-if (savedTheme === "dark") {
+    const city = document.getElementById("city").value;
 
-    document.body.classList.add("dark");
-    themeButton.textContent = "☀️";
+    if(!favorites.includes(city)){
 
-} else {
-
-    document.body.classList.remove("dark");
-    themeButton.textContent = "🌙";
-
-}
-
-// Beim Klick umschalten
-themeButton.addEventListener("click", function () {
-
-    document.body.classList.toggle("dark");
-
-    if (document.body.classList.contains("dark")) {
-
-        localStorage.setItem("theme", "dark");
-        themeButton.textContent = "☀️";
-
-    } else {
-
-        localStorage.setItem("theme", "light");
-        themeButton.textContent = "🌙";
+        favorites.push(city);
 
     }
 
-});
-// ======================================
-// Farewell Screen
-// ======================================
 
-const farewell = document.getElementById("farewell-screen");
-const trigger = document.getElementById("farewell-trigger");
 
-let isPlaying = false;
 
-const observer = new IntersectionObserver((entries) => {
+    document.getElementById("favoriteList").innerHTML =
 
-    entries.forEach(entry => {
+    favorites.join("<br>");
 
-        if (entry.isIntersecting && !isPlaying) {
+}
 
-            isPlaying = true;
+function goPlanner(){
 
-            setTimeout(() => {
+    document.getElementById("planner").scrollIntoView({
 
-                farewell.classList.add("show");
-
-                setTimeout(() => {
-
-                    farewell.classList.remove("show");
-
-                    isPlaying = false;
-
-                }, 6000);
-
-            }, 600);
-
-        }
+        behavior:"smooth"
 
     });
 
-}, {
-    threshold: 0.6
-});
+}   
+function exploreCity(city){
 
-observer.observe(trigger);
+    document.getElementById("city").value = city;
+
+    createTrip();
+
+    document.getElementById("planner").scrollIntoView({
+
+        behavior:"smooth"
+
+    });
+
+}
